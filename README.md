@@ -1,73 +1,243 @@
-# Welcome to your Lovable project
+# Obra Maestra Pizzería - Sitio Web Oficial
 
-## Project info
+Sitio web oficial de **Obra Maestra Pizzería**, ubicada en Santiago Momoxpan, Puebla, México. Una pizzería artesanal que combina el arte culinario con ingredientes locales y masa madre fermentada al estilo francés.
 
-**URL**: https://lovable.dev/projects/0ab064d9-525b-46ae-992e-45fbf85d54e9
+## Descripción del Proyecto
 
-## How can I edit this code?
+Este es el sitio web corporativo de Obra Maestra Pizzería, diseñado para brindar a los clientes una experiencia visual atractiva y facilitar el contacto directo a través de WhatsApp. El sitio incluye información sobre el restaurante, menú, galería de imágenes, reseñas y datos de contacto.
 
-There are several ways of editing your application.
+## Características Principales
 
-**Use Lovable**
+- **Diseño Responsivo**: Totalmente adaptable a dispositivos móviles, tabletas y escritorio
+- **Navegación Fluida**: Scroll suave entre secciones con menú de navegación sticky
+- **Integración WhatsApp**: Botones de contacto directo al número del negocio
+- **Galería de Imágenes**: Imágenes reales del restaurante, pizzas e ingredientes
+- **Formulario de Contacto**: Envío de mensajes directo a WhatsApp
+- **Optimización de Imágenes**: Formato WebP para carga rápida
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0ab064d9-525b-46ae-992e-45fbf85d54e9) and start prompting.
+## Tecnologías Utilizadas
 
-Changes made via Lovable will be committed automatically to this repo.
+### Frontend
+- **React 18.3.1** - Biblioteca principal de UI
+- **TypeScript** - Lenguaje de programación tipado
+- **Vite 5.4.19** - Build tool y servidor de desarrollo
+- **React Router DOM 6.30.1** - Enrutamiento del lado del cliente
 
-**Use your preferred IDE**
+### UI/Styling
+- **Tailwind CSS 3.4.17** - Framework de estilos utility-first
+- **shadcn/ui** - Componentes de UI basados en Radix UI
+- **Lucide React** - Iconos modernos
+- **Tailwind Animate** - Animaciones personalizadas
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Formularios y Validación
+- **React Hook Form 7.61.1** - Manejo de formularios
+- **Zod 3.25.76** - Validación de schemas
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Estado y Queries
+- **TanStack Query 5.83.0** - Manejo de estado del servidor
+- **Sonner** - Notificaciones toast
 
-Follow these steps:
+## Estructura del Proyecto
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```
+obra-maestra-pizzeria-main/
+├── public/                 # Archivos públicos estáticos
+│   ├── favicon.ico
+│   ├── robots.txt
+│   └── placeholder.svg
+├── src/
+│   ├── assets/            # Imágenes y recursos
+│   │   ├── logo.png
+│   │   ├── hero-pizza-oven.jpg
+│   │   ├── pizza-margherita.webp
+│   │   ├── fresh-ingredients.webp
+│   │   ├── restaurant-interior.webp
+│   │   └── about-pizza-hq.jpg
+│   ├── components/        # Componentes React
+│   │   ├── ui/           # Componentes shadcn/ui
+│   │   ├── Navigation.tsx
+│   │   ├── Hero.tsx
+│   │   ├── About.tsx
+│   │   ├── Menu.tsx
+│   │   ├── Gallery.tsx
+│   │   ├── Reviews.tsx
+│   │   ├── Contact.tsx
+│   │   └── Footer.tsx
+│   ├── hooks/            # Custom hooks
+│   ├── lib/              # Utilidades
+│   ├── pages/            # Páginas
+│   │   ├── Index.tsx
+│   │   └── NotFound.tsx
+│   ├── App.tsx           # Componente raíz
+│   ├── main.tsx          # Punto de entrada
+│   └── index.css         # Estilos globales
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+├── tailwind.config.ts
+└── README.md
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Secciones del Sitio Web
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 1. Hero (Inicio)
+- Logo de Obra Maestra Pizzería
+- Título y descripción principal
+- Botones de acción: "Ver Menú" y "Contactar por WhatsApp"
+- Imagen de fondo: Horno de pizza artesanal
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### 2. Nosotros (About)
+- Historia y filosofía de Obra Maestra
+- Descripción del proceso artesanal
+- Información sobre ingredientes locales
+- Imagen destacada de pizza artesanal
+
+### 3. Menú
+- Listado de pizzas disponibles con descripciones
+- Precios y tamaños
+- Ingredientes destacados
+
+### 4. Galería
+- 4 imágenes de alta calidad:
+  - Horno de leña artesanal
+  - Pizzas gourmet
+  - Ingredientes frescos
+  - Interior del restaurante
+- Efecto hover con descripción
+
+### 5. Reseñas
+- Testimonios de clientes
+- Sistema de valoración con estrellas
+
+### 6. Contacto
+- Información de ubicación con enlace a Google Maps
+- Teléfono de contacto: +52 221 605 0515
+- Horarios de atención
+- Enlaces a redes sociales (Facebook e Instagram)
+- Formulario de contacto que redirige a WhatsApp
+
+### 7. Footer
+- Copyright
+- Enlaces rápidos
+- Información legal
+
+## Instalación y Configuración
+
+### Requisitos Previos
+- Node.js 18+ y npm
+- Git
+
+### Instalación Local
+
+1. Clonar el repositorio:
+```bash
+git clone <URL_DEL_REPOSITORIO>
+cd obra-maestra-pizzeria-main
+```
+
+2. Instalar dependencias:
+```bash
+npm install
+```
+
+3. Iniciar servidor de desarrollo:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+El sitio estará disponible en `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Scripts Disponibles
 
-**Use GitHub Codespaces**
+```bash
+npm run dev          # Inicia el servidor de desarrollo
+npm run build        # Construye para producción
+npm run build:dev    # Construye en modo desarrollo
+npm run lint         # Ejecuta el linter
+npm run preview      # Preview del build de producción
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Despliegue en Vercel
 
-## What technologies are used for this project?
+### Configuración Automática
+Vercel detecta automáticamente proyectos Vite y aplica la configuración óptima.
 
-This project is built with:
+### Pasos para Desplegar
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. **Conectar Repositorio en Vercel**:
+   - Ir a [vercel.com](https://vercel.com)
+   - Click en "Add New Project"
+   - Importar tu repositorio de GitHub
+   - Vercel detectará automáticamente la configuración de Vite
 
-## How can I deploy this project?
+2. **Configuración del Proyecto** (automática):
+   - Framework Preset: Vite
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Install Command: `npm install`
 
-Simply open [Lovable](https://lovable.dev/projects/0ab064d9-525b-46ae-992e-45fbf85d54e9) and click on Share -> Publish.
+3. **Variables de Entorno** (si las hay):
+   - No se requieren para este proyecto
 
-## Can I connect a custom domain to my Lovable project?
+4. **Deploy**:
+   - Click en "Deploy"
+   - Vercel construirá y desplegará automáticamente
 
-Yes, you can!
+### Configuración de Build
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+El proyecto ya está configurado correctamente con:
+- `vite.config.ts` optimizado
+- Path aliases configurados (`@/`)
+- Plugins de React con SWC para mejor rendimiento
+- Servidor configurado para puerto 8080
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Información de Contacto
+
+**Obra Maestra Pizzería**
+
+- **Dirección**: C. Prol. de la 6 Nte. 4402-Local 4, Santiago Momoxpan, San Diego los Sauces, 72760 Puebla, México
+- **Teléfono/WhatsApp**: +52 221 605 0515
+- **Instagram**: [@obramaestrapizzeria](https://instagram.com/obramaestrapizzeria)
+- **Facebook**: [Obra Maestra Pizzería](https://facebook.com/ObraMaestraPizzeria)
+
+### Horarios
+- Lunes a Jueves: 1:00 PM - 10:00 PM
+- Viernes a Domingo: 1:00 PM - 11:00 PM
+
+## Características Técnicas
+
+### Optimizaciones
+- Imágenes en formato WebP para mejor compresión
+- Lazy loading de componentes
+- Code splitting automático con Vite
+- Fuentes optimizadas con Google Fonts (Playfair Display + Inter)
+- CSS optimizado con Tailwind CSS y purge automático
+
+### Accesibilidad
+- Semantic HTML
+- Alt text en todas las imágenes
+- Navegación por teclado
+- Contrast ratios accesibles
+
+### SEO
+- Meta tags optimizados
+- Open Graph para redes sociales
+- Robots.txt configurado
+- Sitemap automático
+
+## Soporte de Navegadores
+
+- Chrome (últimas 2 versiones)
+- Firefox (últimas 2 versiones)
+- Safari (últimas 2 versiones)
+- Edge (últimas 2 versiones)
+- Dispositivos móviles iOS y Android
+
+## Licencia
+
+© 2024 Obra Maestra Pizzería. Todos los derechos reservados.
+
+---
+
+**Desarrollado para Obra Maestra Pizzería** - Donde el arte culinario cobra vida
