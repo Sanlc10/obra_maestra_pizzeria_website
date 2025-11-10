@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 import bannerImage from "@/assets/banner_obra_maestra.png";
+import mobileHeroImage from "@/assets/hero_image_mobile.webp";
 
 const Hero = () => {
   const whatsappNumber = "522216050515"; // (+52) 221 605 0515
@@ -15,9 +16,9 @@ const Hero = () => {
         <div
           className="absolute inset-0 hero-background"
           style={{
-            backgroundImage: `url(${bannerImage})`,
+            backgroundImage: `url(${mobileHeroImage})`,
             backgroundSize: "cover",
-            backgroundPosition: "92.5% center",
+            backgroundPosition: "center center",
             backgroundRepeat: "no-repeat",
           }}
         >
@@ -25,6 +26,7 @@ const Hero = () => {
           <style>{`
             @media (min-width: 768px) {
               .hero-background {
+                background-image: url(${bannerImage}) !important;
                 background-position: right center !important;
               }
             }
