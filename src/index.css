@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Rustic Italian Color Palette */
+    --background: 42 47% 95%; /* Warm cream */
+    --foreground: 25 35% 15%; /* Dark wood brown */
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 35% 15%;
+
+    --popover: 42 47% 98%;
+    --popover-foreground: 25 35% 15%;
+
+    /* Terracotta primary */
+    --primary: 12 60% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Deep Italian red */
+    --secondary: 0 60% 30%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Olive green */
+    --muted: 82 25% 35%;
+    --muted-foreground: 42 20% 70%;
+
+    /* Warm gold accent */
+    --accent: 38 90% 50%;
+    --accent-foreground: 25 35% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 25 20% 85%;
+    --input: 25 20% 90%;
+    --ring: 12 60% 50%;
+
+    --radius: 0.75rem;
+    
+    /* Custom design tokens */
+    --wood-dark: 25 35% 15%;
+    --wood-medium: 30 25% 35%;
+    --terracotta: 12 60% 50%;
+    --terracotta-light: 12 60% 65%;
+    --olive: 82 25% 35%;
+    --olive-light: 82 25% 50%;
+    --cream: 42 47% 95%;
+    --warm-white: 42 47% 98%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--wood-dark)) 0%, hsl(var(--wood-medium)) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(var(--cream)) 0%, hsl(var(--warm-white)) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--wood-dark) / 0.1);
+    --shadow-medium: 0 8px 30px hsl(var(--wood-dark) / 0.15);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 25 35% 12%;
+    --foreground: 42 47% 95%;
+
+    --card: 25 35% 15%;
+    --card-foreground: 42 47% 95%;
+
+    --popover: 25 35% 15%;
+    --popover-foreground: 42 47% 95%;
+
+    --primary: 12 60% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 60% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 82 25% 25%;
+    --muted-foreground: 42 20% 60%;
+
+    --accent: 38 90% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 25 25% 25%;
+    --input: 25 25% 20%;
+    --ring: 12 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
