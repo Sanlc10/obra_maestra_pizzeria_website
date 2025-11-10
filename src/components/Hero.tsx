@@ -13,18 +13,18 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 hero-background"
           style={{
             backgroundImage: `url(${bannerImage})`,
             backgroundSize: "cover",
-            backgroundPosition: "center center",
+            backgroundPosition: "92.5% center",
             backgroundRepeat: "no-repeat",
           }}
         >
           {/* Media query para desktop */}
           <style>{`
             @media (min-width: 768px) {
-              .absolute.inset-0 > div {
+              .hero-background {
                 background-position: right center !important;
               }
             }
