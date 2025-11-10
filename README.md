@@ -9,11 +9,13 @@ Este es el sitio web corporativo de Obra Maestra Pizzería, diseñado para brind
 ## Características Principales
 
 - **Diseño Responsivo**: Totalmente adaptable a dispositivos móviles, tabletas y escritorio
+- **Hero Artístico**: Banner inspirado en pintura renacentista con branding integrado
+- **Carousel Interactivo**: Galería dinámica con 13 imágenes, auto-play y navegación múltiple
 - **Navegación Fluida**: Scroll suave entre secciones con menú de navegación sticky
-- **Integración WhatsApp**: Botones de contacto directo al número del negocio
-- **Galería de Imágenes**: Imágenes reales del restaurante, pizzas e ingredientes
+- **Integración WhatsApp**: Botones de contacto directo al número del negocio (+52 221 605 0515)
 - **Formulario de Contacto**: Envío de mensajes directo a WhatsApp
-- **Optimización de Imágenes**: Formato WebP para carga rápida
+- **Optimización de Imágenes**: Formato WebP y JPG optimizado para carga rápida
+- **Animaciones Suaves**: Efectos hover y transiciones elegantes en botones y controles
 
 ## Tecnologías Utilizadas
 
@@ -26,6 +28,7 @@ Este es el sitio web corporativo de Obra Maestra Pizzería, diseñado para brind
 ### UI/Styling
 - **Tailwind CSS 3.4.17** - Framework de estilos utility-first
 - **shadcn/ui** - Componentes de UI basados en Radix UI
+- **Embla Carousel React 8.6.0** - Carousel ligero y performante
 - **Lucide React** - Iconos modernos
 - **Tailwind Animate** - Animaciones personalizadas
 
@@ -45,9 +48,15 @@ obra-maestra-pizzeria-main/
 │   ├── favicon.ico
 │   ├── robots.txt
 │   └── placeholder.svg
+├── carrousel/             # Imágenes del carousel (13 fotos)
+│   ├── banner_obra_maestra.png
+│   ├── pizza_horno.jpg
+│   ├── el_david_pizza.jpg
+│   └── ... (más imágenes)
 ├── src/
 │   ├── assets/            # Imágenes y recursos
 │   │   ├── logo.png
+│   │   ├── banner_obra_maestra.png
 │   │   ├── hero-pizza-oven.jpg
 │   │   ├── pizza-margherita.webp
 │   │   ├── fresh-ingredients.webp
@@ -82,10 +91,13 @@ obra-maestra-pizzeria-main/
 ## Secciones del Sitio Web
 
 ### 1. Hero (Inicio)
-- Logo de Obra Maestra Pizzería
-- Título y descripción principal
-- Botones de acción: "Ver Menú" y "Contactar por WhatsApp"
-- Imagen de fondo: Horno de pizza artesanal
+- Banner artístico inspirado en pintura renacentista
+- Logo "OBRA MAESTRA - PIZZERÍA -" integrado en la imagen
+- Botones de acción con animaciones hover en la parte inferior:
+  - "Ver Menú" (scroll automático a sección menú)
+  - "Contactar por WhatsApp" (enlace directo)
+- Efectos: Scale hover y shadow elevation
+- Posición de imagen: right center
 
 ### 2. Nosotros (About)
 - Historia y filosofía de Obra Maestra
@@ -98,13 +110,23 @@ obra-maestra-pizzeria-main/
 - Precios y tamaños
 - Ingredientes destacados
 
-### 4. Galería
-- 4 imágenes de alta calidad:
-  - Horno de leña artesanal
-  - Pizzas gourmet
-  - Ingredientes frescos
-  - Interior del restaurante
-- Efecto hover con descripción
+### 4. Galería - Carousel Interactivo
+- **13 imágenes de alta calidad** de Obra Maestra Pizzería:
+  - Pizzas artesanales en horno de leña
+  - Platillos gourmet (El David, Rafaello, pasta, ensaladas)
+  - Proceso artesanal (amasado de masa madre)
+  - Servicio y experiencia del cliente
+  - Interior acogedor del restaurante
+- **Navegación múltiple**:
+  - Flechas izquierda/derecha (aparecen al hover)
+  - Dots indicadores clickeables
+  - Teclado (← →)
+  - Touch/swipe en móviles
+- **Auto-play**: Cambio automático cada 5 segundos
+- **Transiciones**: Slide suave con Embla Carousel
+- **Overlay**: Descripción de cada imagen en la parte inferior
+- **Contador**: Indica posición actual (ej: "5 / 13")
+- **Completamente responsivo**: Aspect ratio 16:9
 
 ### 5. Reseñas
 - Testimonios de clientes
