@@ -11,17 +11,27 @@ const Hero = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-end justify-center pt-20 pb-16">
       {/* Background Image */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${bannerImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "right center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      <div className="absolute inset-0 z-0">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url(${bannerImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          {/* Media query para desktop */}
+          <style>{`
+            @media (min-width: 768px) {
+              .absolute.inset-0 > div {
+                background-position: right center !important;
+              }
+            }
+          `}</style>
+        </div>
         {/* Overlay sutil para mejorar legibilidad de botones */}
-        <div className="absolute inset-0 bg-gradient-to-t from-wood-dark/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-wood-dark/70 via-wood-dark/20 to-transparent md:from-wood-dark/60 md:via-transparent" />
       </div>
 
       {/* Botones de acción en la parte inferior */}
